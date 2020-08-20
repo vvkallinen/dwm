@@ -24,7 +24,6 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -56,10 +55,10 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *upvol[]   = { "amixer", "set", "Master", "5%+",     NULL };
-static const char *downvol[] = { "amixer", "set", "Master", "5%-",     NULL };
-static const char *mutevol[] = { "amixer", "set", "Master", "toggle", NULL };
-static const char *mutemic[] = { "amixer", "set", "Capture", "toggle", NULL };
+static const char *upvol[]    = { "amixer", "set", "Master", "5%+",     NULL };
+static const char *downvol[]  = { "amixer", "set", "Master", "5%-",     NULL };
+static const char *mutevol[]  = { "amixer", "set", "Master", "toggle", NULL };
+static const char *mutemic[]  = { "amixer", "set", "Capture", "toggle", NULL };
 
 static Key keys[] = {
 	/* modifier         key                      function        argument */
