@@ -59,6 +59,7 @@ static const char *upvol[]    = { "amixer", "set", "Master", "5%+",     NULL };
 static const char *downvol[]  = { "amixer", "set", "Master", "5%-",     NULL };
 static const char *mutevol[]  = { "amixer", "set", "Master", "toggle", NULL };
 static const char *mutemic[]  = { "amixer", "set", "Capture", "toggle", NULL };
+static const char *shoot[]    = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier         key                      function        argument */
@@ -99,6 +100,7 @@ static Key keys[] = {
 	{ 0,                XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0,                XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                XF86XK_AudioMicMute,     spawn,          {.v = mutemic } },
+	{ 0,                XK_Print,                spawn,          {.v = shoot } },
 };
 
 /* button definitions */
